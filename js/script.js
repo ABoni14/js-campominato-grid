@@ -4,9 +4,9 @@ const button = document.getElementById("button");
 const listNumbers = [];
 let difficolta = document.getElementById("difficolta");
 
-
 button.addEventListener("click",function(){
   console.log(difficolta.value);
+  container.innerHTML = "";
   let boxNumber = 0;
   if(difficolta.value == "facile"){
     alert(difficolta.value);
@@ -26,60 +26,30 @@ button.addEventListener("click",function(){
 
 })
 
-
-/////////////////////////////////////
-function init(tot){
-    for(let i = 0; i < tot; i++){
-
-        // creo l'elemento square e lo aggiungo al container
-        const sq = createSquare(container);
-    
-        sq.addEventListener('click',function(){
-          //  console.log(this);
-            this.classList.add('clicked');
-        })
-    
-    }
-    
-}
-
 function createSquare(target){
     const sq = document.createElement('div');
-    const numRandom = generateUniqueRandomInt(listNumbers,tot);
-
-    // even o odd con la funzione
-    //const classes = ['square',getEvenOdd(numRandom)]
-
-    // even o odd con operatore ternario
-    const classes = ['square', (numRandom % 2) ? 'odd' : 'even'];
-
-    sq.innerHTML = `<span>${numRandom}</span>`;
-    sq.classList.add(...classes);
+    sq.classList.add("square");
+    if(difficolta == "facile"){
+      sq.classList.add("easy");
+      sq.classList.remove("normal");
+      sq.classList.remove("hard");
+    } else if(difficolta == "normale"){
+      sq.classList.add("normal");
+      sq.classList.remove("easy");
+      sq.classList.remove("hard");
+    } else{
+      sq.classList.add("hard");
+      sq.classList.remove("easy");
+      sq.classList.remove("normal");
+    }
     target.append(sq);
     return sq;
 }
 
-function generateUniqueRandomInt(list, min, max){
-    // devo generare un numero random, verificare se esiste, Se non c'è lo aggiungo allelenco altrimenti ne estraggo un'altro
-    let number = null, valid = false;
+function init(tot){
+  for(let i = 0; i < tot; i++){
+    const sq = createSquare(container);
+    sq.innerHTML = i + 1;
+  }
+}   
 
-     // controllo di unicità
-    while(!valid){
-       // console.log(number);
-        number = generateRandomInt(min,max);
-        if(!list.includes(number)) {
-            valid = true;
-            list.push(number);
-        }
-    }
-    return number;
-}
-
-function generateRandomInt(min, max){
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-
-function getEvenOdd(n){
-    if(n % 2) return 'odd';
-    return 'even';
-}

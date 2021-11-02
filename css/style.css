@@ -9,7 +9,7 @@ header{
 }
 
 main{
-  background-color: white;
+  background-color: #70ffd5;
   height: calc(100vh - 200px);
 }
 
@@ -28,23 +28,21 @@ footer{
   justify-content: center;
   align-items: center;
   float: left;
-  width: calc(100% / 8);
-  height: calc(100% / 8);
-  border: 2px solid white;
+  border: 1px solid black;
   cursor: pointer;
-  color: white;
 }
 
-.square span{
-  display: none;
-}
-.square.clicked span{
-  display: block;
+.square.easy{
+  width: calc(100% / 10);
+  height: calc(100% / 10);
 }
 
-.square.even.clicked{
-  background-color: #3DC4B6;
+.square.normal{
+  width: calc(100% / 9);
+  height: calc(100% / 10);
 }
-.square.odd.clicked{
-  background-color: brown;
+
+.square.hard{
+  width: calc(100% / 7);
+  height: calc(100% / 10);
 }
