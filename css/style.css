@@ -39,10 +39,10 @@ footer{
 
 .square.normal{
   width: calc(100% / 9);
-  height: calc(100% / 10);
+  height: calc(100% / 9);
 }
 
 .square.hard{
   width: calc(100% / 7);
-  height: calc(100% / 10);
+  height: calc(100% / 7);
 }

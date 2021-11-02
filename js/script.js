@@ -27,23 +27,17 @@ button.addEventListener("click",function(){
 })
 
 function createSquare(target){
-    const sq = document.createElement('div');
-    sq.classList.add("square");
-    if(difficolta == "facile"){
-      sq.classList.add("easy");
-      sq.classList.remove("normal");
-      sq.classList.remove("hard");
-    } else if(difficolta == "normale"){
-      sq.classList.add("normal");
-      sq.classList.remove("easy");
-      sq.classList.remove("hard");
-    } else{
-      sq.classList.add("hard");
-      sq.classList.remove("easy");
-      sq.classList.remove("normal");
-    }
-    target.append(sq);
-    return sq;
+  const sq = document.createElement('div');
+  sq.classList.add("square");
+  if(difficolta.value == "facile"){
+    sq.classList.add("easy");
+  } else if(difficolta.value == "normale"){
+    sq.classList.add("normal");
+  } else{
+    sq.classList.add("hard");
+  }
+  target.append(sq);
+  return sq;
 }
 
 function init(tot){
