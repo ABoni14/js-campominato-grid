@@ -7,3 +7,19 @@ header{
 .logo img{
   height: 60px;
 }
+
+main{
+  background-color: white;
+  height: calc(100vh - 200px);
+}
+
+.ab-container{
+  width: 500px;
+  height: 500px;
+  background-color: red;
+}
+
+footer{
+  background-color: lightgrey;
+  height: 100px;
+}
