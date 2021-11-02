@@ -16,10 +16,35 @@ main{
 .ab-container{
   width: 500px;
   height: 500px;
-  background-color: red;
 }
 
 footer{
   background-color: lightgrey;
   height: 100px;
+}
+
+.square{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: calc(100% / 8);
+  height: calc(100% / 8);
+  border: 2px solid white;
+  cursor: pointer;
+  color: white;
+}
+
+.square span{
+  display: none;
+}
+.square.clicked span{
+  display: block;
+}
+
+.square.even.clicked{
+  background-color: #3DC4B6;
+}
+.square.odd.clicked{
+  background-color: brown;
 }
