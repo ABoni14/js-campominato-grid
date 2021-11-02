@@ -9,16 +9,13 @@ button.addEventListener("click",function(){
   container.innerHTML = "";
   let boxNumber = 0;
   if(difficolta.value == "facile"){
-    alert(difficolta.value);
     boxNumber = 100;
     console.log("prova facile", boxNumber);
   } else if(difficolta.value == "normale"){
-    alert(difficolta.value);
     boxNumber = 81;
     console.log("prova normale", boxNumber);
   } else {
     boxNumber = 49;
-    alert(difficolta.value);
     console.log("prova difficile", boxNumber);
   }; 
   

@@ -1,7 +1,6 @@
 header{
   height: 100px;
   padding: 15px 30px;
-  background-color: grey;
 }
 
 .logo img{
@@ -19,7 +18,6 @@ main{
 }
 
 footer{
-  background-color: lightgrey;
   height: 100px;
 }
 

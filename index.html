@@ -10,30 +10,36 @@
 </head>
 
 <body>
-  <header class="d-flex justify-content-between align-items-center">
-    <div class="logo d-flex align-items-center">
-      <img class="me-3" src="img/logo-boolean.png" alt="">
-      <h2 >Campo Minato</h2> 
-    </div>
-    <div class="right-header">
-      <select name="difficoltà" id="difficolta">
-        <option value="facile">Easy</option>
-        <option value="normale">Normal</option>
-        <option value="difficile">Hard</option>
-      </select>
-      <div id="button" class="btn btn-dark ms-5">Generate</div>
-    </div>
-  </header>
-
+  <div class="container">
+    <header class="d-flex justify-content-between align-items-center">
+      <div class="logo d-flex align-items-center">
+        <img class="me-3" src="img/logo-boolean.png" alt="">
+        <h2 >Campo Minato</h2> 
+      </div>
+      <div class="right-header">
+        <span>Difficoltà:</span>
+        <select name="difficoltà" id="difficolta" class="pe-5">
+          <option value="facile">Easy</option>
+          <option value="normale">Normal</option>
+          <option value="difficile">Hard</option>
+        </select>
+        <div id="button" class="btn btn-dark ms-5">Generate</div>
+      </div>
+    </header>
+  </div>
+  
   <main class="d-flex justify-content-center align-items-center">
     <div id="container" class="ab-container">
       <h2>Scegli la difficoltà, clicca il bottone e inizia a giocare!</h2>
     </div>
   </main>
 
-  <footer>
-    <p>Design by Boolean</p>
-  </footer>
+  <div class="container">
+    <footer>
+      <p>Made with <span>&heartsuit;</span> by <span class="text-decoration-underline text-primary">Boolean</span></p>
+    </footer>
+  </div>
+  
 
   <script src="js/script.js"></script>
 </body>
